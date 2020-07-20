@@ -1,0 +1,20 @@
+Traceback (most recent call last):
+  File "Order.py", line 325, in Proc
+  File "Order.py", line 159, in webQuteOperate
+  File "site-packages\selenium\webdriver\remote\switch_to.py", line 82, in frame
+  File "site-packages\selenium\webdriver\remote\webdriver.py", line 978, in find_element
+  File "site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+  File "site-packages\selenium\webdriver\remote\errorhandler.py", line 241, in check_response
+selenium.common.exceptions.UnexpectedAlertPresentException: Alert Text: The shipTo zip code 77389 is different than Frt quoter zipcode 78682. This PO will use shipTo zipcode 77389. Please confirm.
+Message: Modal dialog present with text: The shipTo zip code 77389 is different than Frt quoter zipcode 78682. This PO will use shipTo zipcode 77389. Please confirm.
+
+Traceback (most recent call last):
+  File "Order.py", line 320, in Proc
+  File "Order.py", line 189, in serchOrder
+  File "site-packages\selenium\webdriver\remote\webdriver.py", line 394, in find_element_by_xpath
+  File "site-packages\selenium\webdriver\remote\webdriver.py", line 978, in find_element
+  File "site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+  File "site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="MAINFORM"]/table[4]/tbody/tr/td/table/tbody/tr/td[4]/table/tbody/tr/td[2]/span/a"}
+  (Session info: chrome=80.0.3987.149)
+
