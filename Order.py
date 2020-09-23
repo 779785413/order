@@ -167,7 +167,8 @@ def webQuteOperate(webQuteDriver,addrInfoDir,shopInfo,order):
         webQuteDriver.switch_to.parent_frame()
         time.sleep(1)
         '''
-    webQuteDriver.find_element_by_xpath('//*[@id="FlashID"]/object').click()
+    #webQuteDriver.find_element_by_xpath('//*[@id="FlashID"]/object').click() 
+    webQuteDriver.find_element_by_xpath('//*[@id="openBoxs"]/table/tbody/tr/td/img').click()
     quickSearchTable = ''
     for shop in shopInfo:
         quickSearchTable += shop[0] + ' ' + shop[1].replace(' ','') + '\r\n'
@@ -187,7 +188,6 @@ def webQuteOperate(webQuteDriver,addrInfoDir,shopInfo,order):
         shopIndex += 1
     webQuteDriver.switch_to.parent_frame()
     webQuteDriver.find_element_by_xpath('//*[@id="batchValue"]').send_keys(order)
-
     webQuteDriver.find_element_by_xpath('//*[@id="change_batch"]').click()
 def findWebQuteWind(driver):
     return  switchToWindwos('Web Quote',driver)
@@ -323,7 +323,7 @@ def gfxLoginProc(gfxDriver):
     WebDriverWait(gfxDriver, 300).until(EC.visibility_of_element_located((By.XPATH, '//*[@id="MAINFORM"]/center/table/tbody/tr[1]/td[2]/input')))
     gfxDriver.find_element_by_xpath('//*[@id="MAINFORM"]/center/table/tbody/tr[1]/td[2]/input').clear()
     gfxDriver.find_element_by_xpath('//*[@id="MAINFORM"]/center/table/tbody/tr[1]/td[2]/input').send_keys('CAROLLIU')
-    gfxDriver.find_element_by_xpath('//*[@id="MAINFORM"]/center/table/tbody/tr[2]/td[2]/input').send_keys('synnex-2020')
+    gfxDriver.find_element_by_xpath('//*[@id="MAINFORM"]/center/table/tbody/tr[2]/td[2]/input').send_keys('synnex-2020-2')
     gfxDriver.find_element_by_xpath('//*[@id="MAINFORM:button"]').click()
 def webQuoteLogin(webQuteDriver):
     WebDriverWait(webQuteDriver, 300).until(EC.presence_of_element_located((By.XPATH,'//*[@id="wrap"]/div/div[2]/a')))
